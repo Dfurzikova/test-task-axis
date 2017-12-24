@@ -1,0 +1,146 @@
+body {
+    font-size: 0;
+    font-family: PT Sans;
+    margin: 0;
+}
+
+.condition-block {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.condition-block > span {
+    width: 20px;
+    margin-right: 5px;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    display: inline-block;
+}
+
+.conteiner {
+    position: absolute;
+    margin-top: 100px;
+    left: 25%;
+}
+
+.arc-conteiner {
+    position: absolute;
+    z-index: 2;
+    margin-left: 36px;
+}
+
+.sum-input-field {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.arc-block {
+    display: inline-block;
+    position: absolute;
+    bottom: -20px
+}
+
+.arc-block > span {
+    font-size: 20px;
+    color: black;
+}
+
+.arc-block > span,
+.input-field {
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -10px;
+}
+
+.ruler-block {
+
+}
+
+.ruler {
+    display: inline-block;
+    background: #fbf2cf;
+    background: linear-gradient(to bottom, #fff8d1 0%, #f7eacd 100%);
+    height: 83px;
+    border-radius: 12px;
+    position: relative;
+    counter-reset: list -1;
+    font-size: 0;
+    padding: 0 40px 0 16px;
+    overflow: hidden;
+}
+
+.ruler:before {
+    content: '';
+    position: absolute;
+    background-color: #7f7d6e;
+    height: 2px;
+    left: 35px;
+    right: 24px;
+    top: 19px;
+    z-index: 0;
+}
+
+.ruler:after {
+    content: '';
+    position: absolute;
+    border: 2px solid #7f7d6e;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    height: 12px;
+    width: 12px;
+    top: 13px;
+    right: 25px;
+}
+
+.ruler > div {
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background-color: #000;
+    counter-increment: list;
+    margin: 11px 19px;
+    position: relative;
+    z-index: 1;
+    vertical-align: top;
+    font-size: 21px;
+    line-height: 27px;
+    text-align: center;
+}
+
+.ruler > div:first-child,
+.ruler > div:nth-child(5n+1) {
+    width: 3px;
+    margin-left: 18px;
+    margin-right: 18px;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.ruler > div:first-child,
+.ruler > div:nth-child(10n+1) {
+    width: 3px;
+    height: 22px;
+    margin-top: 9px;
+}
+
+.ruler > div:before {
+    content: counter(list);
+    position: absolute;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    margin: 21px 0 0 -20px;
+}
+
