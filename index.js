@@ -60,7 +60,7 @@ var checkInt = {
             }
         } else {
             target.style.color = "red";
-            color = 'red';
+            color = 'orange';
         }
 
         if (condition) {
